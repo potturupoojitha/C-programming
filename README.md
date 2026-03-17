@@ -767,3 +767,29 @@ return 0;
 
 //To find the fibonacci series #include <stdio.h> int main() { int n, a = 0, b = 1, c, i; printf("Enter number of terms: "); scanf("%d", &n); printf("Fibonacci Series:\n"); for(i = 1; i <= n; i++) { printf("%d ", a); c = a + b; a = b; b = c; } return 0; }
 
+#iclude<stdio.h> void main() { int i,a[5]; scanf("%d",&n); printf("Enter the integer: ); for (i=0;i=n;i++) { scanf("%d",&a[i]); } printf("Displaying Integers: "); for (int i=0;i<n;++i){ printf("%d"\n",a[i]); } }
+
+//To make the arrays in reverse order #include<stdio.h> void main() { int i,n,a[100]; scanf("%d",&n); for(i=0;i<n;++i){ scanf("%d",a[i]); } for(int i=n-1;;i>=0;i--){ printf("%d",a[i]); } }
+
+//To find the sum of the array elements #include<stdio.h> void main() { int i,n,a[100]; scanf("%d",&n); printf("Enter the number: "); for (i=0;i<n;i++){ scanf("%d",a[i]);} for(i=0;i<=n;i++){ sum=sum+a[i]; printf("Sum%d=",sum); } }
+
+//To find the average of array elements #include<stdio.h> void main() { int i,n,a[100],sum=0,avg; scanf("%d",&n); printf("Enter the integer: "); for (i=0;i<n;i++){ scanf("%d",&a[i]); for(i=0;i<=n;i++){ sum=sum+a[i]; } avg=float(sum)/a[i]; printf("Avg %d=",avg); } }
+
+//To find the largest element #include<stdio.h> void main() { int i,n,a[100],largest; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } largest = a[0]; for(i=1;i<n;i++) { if(a[i] > largest) { largest = a[i]; } } printf("Largest element = %d",largest); }
+
+//To find the given elment in a array #include<stdio.h> void main() { int i,n,a[100],key,flag=0; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } printf("Enter element to search: "); scanf("%d",&key); for(i=0;i<n;i++) { if(a[i] == key) { flag = 1; break; } } if(flag == 1) printf("Element found"); else printf("Element not found"); }
+
+//To find the smallest integer in an array #include<stdio.h> void main() { int i,n,a[100],smallest; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } smallest = a[0]; for(i=1;i<n;i++) { if(a[i] < smallest) { smallest = a[i]; } } printf("Smallest element = %d",smallest); }
+
+//To count even and odd numbers in array #include<stdio.h> void main() { int i,n,a[100],even=0,odd=0; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } for(i=0;i<n;i++) { if(a[i] % 2 == 0) { even++; } else { odd++; } } printf("Even numbers = %d\n",even); printf("Odd numbers = %d",odd); }
+
+//To sort the elements in ascending order #include<stdio.h> void main() { int i,j,n,a[100],temp; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } for(i=0;i<n;i++) { for(j=i+1;j<n;j++) { if(a[i] > a[j]) { temp = a[i]; a[i] = a[j]; a[j] = temp; } } } printf("Array in ascending order:\n"); for(i=0;i<n;i++) { printf("%d ",a[i]); } }
+
+//To sort the element sin the array descending order #include<stdio.h> void main() { int i,j,n,a[100],temp; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } for(i=0;i<n;i++) { for(j=i+1;j<n;j++) { if(a[i] < a[j]) { temp = a[i]; a[i] = a[j]; a[j] = temp; } } } printf("Array in descending order:\n"); for(i=0;i<n;i++) { printf("%d ",a[i]); } }
+
+//To count the positive and negative number in an array #include<stdio.h> void main() { int i,n,a[100],positive=0,negative=0; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } for(i=0;i<n;i++) { if(a[i] > 0) { positive++; } else if(a[i] < 0) { negative++; } } printf("Positive numbers = %d\n",positive); printf("Negative numbers = %d",negative); }
+
+//To find the second largest in an array #include<stdio.h> void main() { int i,n,a[100],largest,second; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } largest = a[0]; second = a[0]; for(i=1;i<n;i++) { if(a[i] > largest) { second = largest; largest = a[i]; } else if(a[i] > second && a[i] != largest) { second = a[i]; } } printf("Second largest element = %d",second); }
+
+//To find the frequeny of the array #include<stdio.h> void main() { int i,j,n,a[100],count; printf("Enter number of elements: "); scanf("%d",&n); printf("Enter the integers:\n"); for(i=0;i<n;i++) { scanf("%d",&a[i]); } for(i=0;i<n;i++) { count = 1; for(j=i+1;j<n;j++) { if(a[i] == a[j]) { count++; } } printf("%d occurs %d times\n",a[i],count); } }
+
