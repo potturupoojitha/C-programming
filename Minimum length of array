@@ -1,0 +1,21 @@
+// Program: Minimum subarray length
+#include <stdio.h>
+int main(){
+    int a[100], n, s, i, j, sum, min=1000;
+
+    scanf("%d",&n);
+    for(i=0;i<n;i++) scanf("%d",&a[i]);
+    scanf("%d",&s);
+
+    for(i=0;i<n;i++){
+        sum=0;
+        for(j=i;j<n;j++){
+            sum+=a[j];
+            if(sum>=s){
+                if((j-i+1)<min) min=j-i+1;
+                break;
+            }
+        }
+    }
+    printf("Min length = %d",min);
+}
