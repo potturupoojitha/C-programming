@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+struct Product {
+    char name[50];
+    int stock;
+};
+
+int main() {
+    struct Product p;
+
+    printf("Enter product name and stock:\n");
+    scanf("%s %d", p.name, &p.stock);
+
+    printf("\nProduct Details:\n");
+    printf("Name: %s\nStock: %d", p.name, p.stock);
+
+    return 0;
+}
