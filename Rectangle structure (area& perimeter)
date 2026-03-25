@@ -1,0 +1,21 @@
+// Program: Rectangle using structure
+#include <stdio.h>
+
+struct Rectangle {
+    int length;
+    int width;
+};
+
+int main() {
+    struct Rectangle r;
+
+    scanf("%d %d", &r.length, &r.width);
+
+    int area = r.length * r.width;
+    int perimeter = 2 * (r.length + r.width);
+
+    printf("Area = %d\n", area);
+    printf("Perimeter = %d", perimeter);
+
+    return 0;
+}
