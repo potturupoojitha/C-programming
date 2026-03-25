@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int n;
+
+start:
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("You entered: %d\n", n);
+
+    if(n != 0)
+        goto start;
+
+    return 0;
+}
