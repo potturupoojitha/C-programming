@@ -1,0 +1,11 @@
+
+#include <stdio.h>
+
+int main() {
+    int a[100], n, i, j;
+
+    printf("Enter size: ");
+    scanf("%d", &n);
+
+    printf("Enter elements:\n");
+    for(i
