@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main() {
+    int n, square, temp, lastDigits;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    square = n * n;
+    temp = n;
+
+    // Find digits of number
+    int digits = 0;
+    while(temp > 0){
+        digits++;
+        temp /= 10;
+    }
+
+    int divisor = 1;
+    for(int i=0;i<digits;i++)
+        divisor *= 10;
+
+    lastDigits = square % divisor;
+
+    if(lastDigits == n)
+        printf("Automorphic Number");
+    else
+        printf("Not Automorphic");
+
+    return 0;
+}
