@@ -1,0 +1,17 @@
+// Program: Pass Structure to Function
+#include <stdio.h>
+
+struct Student {
+    int id;
+    float marks;
+};
+
+void display(struct Student s) {
+    printf("ID: %d\nMarks: %.2f", s.id, s.marks);
+}
+
+int main() {
+    struct Student s = {1, 85.5};
+    display(s);
+    return 0;
+}
