@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int sumSquare(int n) {
+    int sum = 0;
+    while(n > 0) {
+        int d = n % 10;
+        sum += d * d;
+        n /= 10;
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    printf("Enter number: ");
+    scanf("%d", &n);
+
+    int temp = n;
+    while(temp != 1 && temp != 4) {
+        temp = sumSquare(temp);
+    }
+
+    if(temp == 1)
+        printf("Happy Number");
+    else
+        printf("Not Happy Number");
+
+    return 0;
+}
