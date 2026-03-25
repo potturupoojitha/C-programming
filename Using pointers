@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+struct Student {
+    int id;
+    float marks;
+};
+
+int main() {
+    struct Student s = {10, 90.5};
+    struct Student *ptr = &s;
+
+    printf("ID: %d\nMarks: %.2f", ptr->id, ptr->marks);
+
+    return 0;
+}
