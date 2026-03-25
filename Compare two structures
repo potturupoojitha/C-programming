@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    int id;
+    char name[50];
+};
+
+int main() {
+    struct Student s1 = {1, "Ram"};
+    struct Student s2 = {1, "Ram"};
+
+    if(s1.id == s2.id && strcmp(s1.name, s2.name) == 0)
+        printf("Both are equal");
+    else
+        printf("Not equal");
+
+    return 0;
+}
