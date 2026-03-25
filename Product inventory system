@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+struct Product {
+    char name[50];
+    int quantity;
+    float price;
+};
+
+int main() {
+    struct Product p;
+    int choice;
+
+    printf("1.Add Product\n2.Update\n3.View\n");
+    scanf("%d",&choice);
+
+    if(choice==1){
+        printf("Enter name, quantity, price:\n");
+        scanf("%s %d %f",p.name,&p.quantity,&p.price);
+    }
+    else if(choice==2){
+        printf("Enter updated quantity and price:\n");
+        scanf("%d %f",&p.quantity,&p.price);
+    }
+    else if(choice==3){
+        printf("Product: %s\nQty: %d\nPrice: %.2f",
+                p.name,p.quantity,p.price);
+    }
+
+    return 0;
+}
